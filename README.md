@@ -40,8 +40,10 @@ like:
 - Navigation from one XHTML to another
 
 ## Web services
-- JAX-WS
-- JAX-RS
+- (x) JAX-WS service
+- JAX-WS client
+- JAX-RS service
+- JAX-RS client
 
 ## Testing
 - (x) Unit testing with Arquillian
