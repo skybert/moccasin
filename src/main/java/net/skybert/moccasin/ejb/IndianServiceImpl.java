@@ -68,7 +68,7 @@ public class IndianServiceImpl implements IndianService
 
   @Logged
   @Override
-  public Object findIndian(Integer id)
+  public Indian findIndian(Integer id)
   {
     return entityManager.find(Indian.class, id);
   }

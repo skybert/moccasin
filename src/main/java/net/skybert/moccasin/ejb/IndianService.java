@@ -18,7 +18,7 @@ public interface IndianService
 
   public Object findTribe(Integer valueOf);
 
-  public Object findIndian(Integer valueOf);
+  public Indian findIndian(Integer valueOf);
 
   public List<Indian> getIndiansByName(String name);
 

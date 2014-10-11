@@ -1,4 +1,4 @@
-package net.skybert.moccasin.soap;
+package net.skybert.moccasin.ws.soap;
 
 import javax.jws.WebMethod;
 import javax.jws.WebParam;
@@ -9,13 +9,13 @@ import net.skybert.moccasin.data.Indian;
 
 /**
  * IndianWS
- *
+ * 
  * @author Torstein Krause Johansen
  * @version 1.0
  */
 @WebService(targetNamespace = "http://skybert.net/moccasin"
 
-            )
+)
 public class IndianWS
 {
 
