@@ -1,0 +1,20 @@
+
+
+- (x)  merge()
+- (x) flush; normally not necessary, handled by the app server, flushes
+  your hibernate session.
+- most popular JPA queries
+- (x) enums
+- getReference () -> tom proxy
+- find() ->
+
+- if you have mappedBy, Hibernate will not create a mapping
+  table. e.g.: @OneToMany(mappedBy = "tribe")
+
+
+
+TODO:
+- search em.getReference vs em.find?
+- what is an extended transaction?
+
+
