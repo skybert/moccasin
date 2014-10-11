@@ -4,8 +4,8 @@
   <persistence-unit name="jeeky-ds" transaction-type="JTA">
     <provider>org.hibernate.ejb.HibernatePersistence</provider>
     <jta-data-source>java:/db/jeekydb</jta-data-source>
-    <class>net.skybert.data.Tribe</class>
-    <class>net.skybert.data.Indian</class>
+    <class>net.skybert.moccasin.moccasin.data.Tribe</class>
+    <class>net.skybert.moccasin.moccasin.data.Indian</class>
 
     <properties>
       <property name="hibernate.hbm2ddl.auto" value="create"/>

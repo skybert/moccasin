@@ -1,14 +1,14 @@
-package net.skybert;
+package net.skybert.moccasin;
 
 import javax.inject.Inject;
 
 import java.io.*;
 
-import net.skybert.data.Indian;
-import net.skybert.data.LanguageFamily;
-import net.skybert.data.Tribe;
-import net.skybert.interceptor.Logged;
-import net.skybert.interceptor.Sauron;
+import net.skybert.moccasin.data.Indian;
+import net.skybert.moccasin.data.LanguageFamily;
+import net.skybert.moccasin.data.Tribe;
+import net.skybert.moccasin.interceptor.Logged;
+import net.skybert.moccasin.interceptor.Sauron;
 
 import org.jboss.arquillian.container.test.api.Deployment;
 import org.jboss.arquillian.junit.Arquillian;

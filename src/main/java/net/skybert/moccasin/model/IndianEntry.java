@@ -1,4 +1,4 @@
-package net.skybert.model;
+package net.skybert.moccasin.model;
 
 import java.io.Serializable;
 
@@ -10,10 +10,10 @@ import javax.faces.convert.Converter;
 import javax.inject.Inject;
 import javax.inject.Named;
 
-import net.skybert.data.Indian;
-import net.skybert.data.Tribe;
-import net.skybert.ejb.IndianService;
-import net.skybert.interceptor.Logged;
+import net.skybert.moccasin.data.Indian;
+import net.skybert.moccasin.data.Tribe;
+import net.skybert.moccasin.ejb.IndianService;
+import net.skybert.moccasin.interceptor.Logged;
 
 @Model
 public class IndianEntry implements Serializable

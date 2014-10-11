@@ -1,4 +1,4 @@
-package net.skybert.qualifier;
+package net.skybert.moccasin.qualifier;
 
 import java.lang.annotation.Documented;
 import java.lang.annotation.ElementType;

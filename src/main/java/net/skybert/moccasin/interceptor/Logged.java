@@ -1,19 +1,20 @@
-package net.skybert.qualifier;
+package net.skybert.moccasin.interceptor;
 
 import java.lang.annotation.Documented;
 import java.lang.annotation.ElementType;
+import java.lang.annotation.Inherited;
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
-import javax.inject.Qualifier;
+import javax.interceptor.InterceptorBinding;
 
-@Qualifier
-@Target({ ElementType.TYPE, ElementType.FIELD, ElementType.METHOD,
-    ElementType.PARAMETER })
+@InterceptorBinding
+@Inherited
+@Target({ ElementType.TYPE, ElementType.METHOD })
 @Retention(RetentionPolicy.RUNTIME)
 @Documented
-public @interface Indians
+public @interface Logged
 {
 
 }

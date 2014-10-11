@@ -1,4 +1,4 @@
-package net.skybert.ejb;
+package net.skybert.moccasin.ejb;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -11,9 +11,9 @@ import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.persistence.TypedQuery;
 
-import net.skybert.data.Indian;
-import net.skybert.data.Tribe;
-import net.skybert.interceptor.Logged;
+import net.skybert.moccasin.data.Indian;
+import net.skybert.moccasin.data.Tribe;
+import net.skybert.moccasin.interceptor.Logged;
 
 @Stateless
 public class IndianServiceImpl implements IndianService

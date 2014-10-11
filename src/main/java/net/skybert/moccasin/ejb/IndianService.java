@@ -1,8 +1,8 @@
-package net.skybert.ejb;
+package net.skybert.moccasin.ejb;
 
 import javax.ejb.Local;
 
-import net.skybert.data.*;
+import net.skybert.moccasin.data.*;
 
 import java.util.*;
 

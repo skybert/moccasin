@@ -1,4 +1,4 @@
-package net.skybert.data;
+package net.skybert.moccasin.data;
 
 public enum LanguageFamily
 {

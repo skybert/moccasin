@@ -1,4 +1,4 @@
-package net.skybert.data;
+package net.skybert.moccasin.data;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -1,4 +1,4 @@
-package net.skybert.interceptor;
+package net.skybert.moccasin.interceptor;
 
 import java.io.Serializable;
 
