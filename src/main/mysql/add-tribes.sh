@@ -1,8 +1,8 @@
 #! /usr/bin/env bash
 
-db=jeekydb
-db_user=jeekyuser
-db_password=jeekypassword
+db=moccasindb
+db_user=moccasinuser
+db_password=moccasinpassword
 
 tribe_list="
 Apache

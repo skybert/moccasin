@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <persistence xmlns="http://java.sun.com/xml/ns/persistence" version="1.0">
 
-  <persistence-unit name="jeeky-ds" transaction-type="JTA">
+  <persistence-unit name="moccasin-ds" transaction-type="JTA">
     <provider>org.hibernate.ejb.HibernatePersistence</provider>
-    <jta-data-source>java:/db/jeekydb</jta-data-source>
+    <jta-data-source>java:/db/moccasindb</jta-data-source>
     <class>net.skybert.moccasin.data.Tribe</class>
     <class>net.skybert.moccasin.data.Indian</class>
 
