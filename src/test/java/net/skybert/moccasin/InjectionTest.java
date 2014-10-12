@@ -38,7 +38,8 @@ public class InjectionTest
         .create(JavaArchive.class)
         .addPackages(true, Tribe.class.getPackage().getName())
         .addPackages(true, Sauron.class.getPackage().getName())
-        .addAsManifestResource(new File("src/main/webapp/WEB-INF", "beans.xml"))
+        .addAsManifestResource(
+            new File("src/main/resources/META-INF", "beans.xml"))
         .addAsManifestResource(
             new File("src/main/resources/META-INF", "persistence.xml"));
 

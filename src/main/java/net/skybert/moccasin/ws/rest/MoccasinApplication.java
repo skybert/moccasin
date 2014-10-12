@@ -15,11 +15,4 @@ import javax.ws.rs.core.Application;
 @ApplicationPath("/rest-ws")
 public class MoccasinApplication extends Application
 {
-  @Override
-  public Set<Class<?>> getClasses()
-  {
-    HashSet<Class<?>> classes = new HashSet<Class<?>>();
-    classes.add(IndianWS.class);
-    return classes;
-  }
 }
