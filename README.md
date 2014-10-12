@@ -41,7 +41,7 @@ like:
 ## Web services
 - (x) JAX-WS service
 - JAX-WS client
-- JAX-RS service
+- (x) JAX-RS service
 - JAX-RS client
 
 ## Testing
