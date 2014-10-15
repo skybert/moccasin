@@ -9,8 +9,8 @@ ${jboss_cli_connect} <<EOF
 data-source add \
      --name=moccasin-ds \
      --driver-name=mysql \
-     --connection-url=jdbc:mysql://localhost:5432/moccasindb \
-     --jndi-name=java:jboss/jdbc/moccasindb \
+     --connection-url=jdbc:mysql://localhost/moccasindb \
+     --jndi-name=java:/db/moccasindb \
      --user-name=moccasinuser \
      --password=moccasinpassword
 
