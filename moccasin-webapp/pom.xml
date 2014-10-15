@@ -32,6 +32,11 @@
       <artifactId>moccasin-api</artifactId>
       <version>1.0</version>
     </dependency>
+    <dependency>
+      <groupId>net.skybert</groupId>
+      <artifactId>moccasin-jms</artifactId>
+      <version>1.0</version>
+    </dependency>
     <!--
         Dependencies available in the app server
     -->

@@ -11,6 +11,7 @@
 
   <modules>
     <module>moccasin-api</module>
+    <module>moccasin-jms</module>
     <module>moccasin-webapp</module>
     <module>moccasin-client</module>
   </modules>
@@ -236,6 +237,7 @@
     </profile>
   </profiles>
   <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <jboss.version>7.1.1.Final</jboss.version>
   </properties>
 </project>
