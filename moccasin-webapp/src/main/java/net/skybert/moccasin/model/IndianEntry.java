@@ -10,7 +10,6 @@ import javax.faces.convert.Converter;
 import javax.inject.Inject;
 import javax.inject.Named;
 
-import net.skybert.moccasin.model.*;
 import net.skybert.moccasin.ejb.IndianService;
 import net.skybert.moccasin.interceptor.Logged;
 
@@ -44,10 +43,9 @@ public class IndianEntry implements Serializable
     {
       @Override
       @Logged
-      public Object getAsObject(
-        FacesContext context,
-        UIComponent component,
-        String value)
+      public Object getAsObject(FacesContext context,
+                                UIComponent component,
+                                String value)
       {
 
         return service.findTribe(Integer.valueOf(value));
@@ -55,10 +53,9 @@ public class IndianEntry implements Serializable
 
       @Override
       @Logged
-      public String getAsString(
-        FacesContext context,
-        UIComponent component,
-        Object value)
+      public String getAsString(FacesContext context,
+                                UIComponent component,
+                                Object value)
       {
         if (value == null)
         {
@@ -77,20 +74,18 @@ public class IndianEntry implements Serializable
     return new Converter()
     {
       @Override
-      public Object getAsObject(
-        FacesContext context,
-        UIComponent component,
-        String value)
+      public Object getAsObject(FacesContext context,
+                                UIComponent component,
+                                String value)
       {
 
         return service.findIndian(Integer.valueOf(value));
       }
 
       @Override
-      public String getAsString(
-        FacesContext context,
-        UIComponent component,
-        Object value)
+      public String getAsString(FacesContext context,
+                                UIComponent component,
+                                Object value)
       {
         if (value == null)
         {
