@@ -36,7 +36,7 @@ public class IndianServiceImpl implements IndianService
   public List<Indian> allIndians()
   {
     TypedQuery<GatheringIndian> query = entityManager.createQuery(
-        "select i from Indian i", GatheringIndian.class);
+        "select i from GatheringIndian i", GatheringIndian.class);
     List<GatheringIndian> indians = query.getResultList();
     return toIndians(indians);
   }
@@ -57,7 +57,7 @@ public class IndianServiceImpl implements IndianService
   public List<Tribe> allTribes()
   {
     TypedQuery<GatheringTribe> query = entityManager.createQuery(
-        "select t from Tribe t", GatheringTribe.class);
+        "select t from GatheringTribe t", GatheringTribe.class);
     List<GatheringTribe> tribes = query.getResultList();
 
     // just for fun
@@ -104,7 +104,7 @@ public class IndianServiceImpl implements IndianService
   public List<Indian> getIndiansByName(String name)
   {
     TypedQuery<GatheringIndian> query = entityManager.createQuery(
-        "select i from Indian i where i.name = :indianName",
+        "select i from GatheringIndian i where i.name = :indianName",
         GatheringIndian.class);
     query.setParameter("indianName", name);
 
@@ -115,7 +115,7 @@ public class IndianServiceImpl implements IndianService
   public java.util.List<Indian> getIndiansByTribeName(String name)
   {
     TypedQuery<GatheringIndian> query = entityManager.createQuery(
-        "select i from Indian i where i.tribe.name = :tribeName",
+        "select i from GatheringIndian i where i.tribe.name = :tribeName",
         GatheringIndian.class);
     query.setParameter("tribeName", name);
 
