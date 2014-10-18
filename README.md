@@ -3,21 +3,21 @@
 The web application was set out to utilise technologies and techniques
 like:
 
-## Serious Java EE stuff
-- Conversation scope
-- Bean validation
-
 ## JMS
-- topic
-- queue
-- subscriber
-- JBoss setup
+- (x) topic
+- (x) queue
+- (x) subscriber
+- (x) JBoss setup
 
 ## EJBs
 - Securing method calls
+- (x) @Local
+- (x) @Stateless
+- @LocalBean
 
 ## CDI
 - Own annotations
+- Conversation scope
 - (x) Interceptor
 - Alternatives
 - Decorators
@@ -27,6 +27,10 @@ like:
 - (x) Enums
 - (x) MySQL
 - In-memory database for interactive and automatic testing.
+
+## Validation
+- (x) Bean validation
+- (x) Show bean validation errors in the UI with JSF
 
 ## UI
 - Rich Faces
