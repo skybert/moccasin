@@ -15,6 +15,7 @@ import net.skybert.moccasin.data.GatheringTribe;
 import net.skybert.moccasin.interceptor.Logged;
 import net.skybert.moccasin.model.Indian;
 import net.skybert.moccasin.model.Tribe;
+import net.skybert.moccasin.model.WildTribe;
 
 @Stateless
 public class IndianServiceImpl implements IndianService
@@ -23,8 +24,12 @@ public class IndianServiceImpl implements IndianService
   @PersistenceContext
   private EntityManager entityManager;
 
+  // @RolesAllowed({ "write" })
+  @Logged
   public long create(Indian indian)
   {
+    System.out.println(getClass() + " create=" + indian);
+
     entityManager.persist(new GatheringIndian(indian));
     return indian.getId();
   }
@@ -33,6 +38,7 @@ public class IndianServiceImpl implements IndianService
   @Logged
   @Produces
   @Named("allIndians")
+  // @PermitAll
   public List<Indian> allIndians()
   {
     TypedQuery<GatheringIndian> query = entityManager.createQuery(
@@ -53,6 +59,7 @@ public class IndianServiceImpl implements IndianService
 
   @Logged
   @Produces
+  // @PermitAll
   @Named("allTribes")
   public List<Tribe> allTribes()
   {
@@ -60,17 +67,10 @@ public class IndianServiceImpl implements IndianService
         "select t from GatheringTribe t", GatheringTribe.class);
     List<GatheringTribe> tribes = query.getResultList();
 
-    // just for fun
-    if (tribes.size() > 0)
-    {
-      System.out.println("tribe=" + tribes.get(0).getName() + " has indians="
-          + getIndiansByTribeName(tribes.get(0).getName()));
-    }
-
     List<Tribe> result = new ArrayList<>();
     for (GatheringTribe tribe : tribes)
     {
-      result.add(new ServingTribe(tribe));
+      result.add(new WildTribe(tribe.getId(), tribe.getName()));
     }
 
     return result;
@@ -81,7 +81,7 @@ public class IndianServiceImpl implements IndianService
   public Tribe findTribe(Integer id)
   {
     GatheringTribe tribe = entityManager.find(GatheringTribe.class, id);
-    return new ServingTribe(tribe);
+    return new WildTribe(tribe.getId(), tribe.getName());
   }
 
   @Logged

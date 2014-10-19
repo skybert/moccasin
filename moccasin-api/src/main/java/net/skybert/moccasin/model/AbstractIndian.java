@@ -1,5 +1,6 @@
 package net.skybert.moccasin.model;
 
+import lombok.EqualsAndHashCode;
 import lombok.ToString;
 
 /**
@@ -9,6 +10,7 @@ import lombok.ToString;
  * @version 1.0
  */
 @ToString
+@EqualsAndHashCode
 public abstract class AbstractIndian implements Indian
 {
   protected String name;

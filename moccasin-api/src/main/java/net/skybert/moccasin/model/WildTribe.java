@@ -8,5 +8,13 @@ package net.skybert.moccasin.model;
  */
 public class WildTribe extends AbstractTribe
 {
+  public WildTribe()
+  {
+  }
 
+  public WildTribe(Integer id, String name)
+  {
+    this.id = id;
+    this.name = name;
+  }
 }

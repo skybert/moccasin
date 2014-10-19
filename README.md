@@ -13,11 +13,13 @@ like:
 - (x) @Local
 - (x) @Stateless
 - @LocalBean
+- @Schedule
 
 ## Security
 - (x) JBoss configuration for database backed security realm
-- Securing EJB method calls
-- Securing web application with standard HTTP
+- (x) Securing EJB method calls
+- (x) Securing web application with HTTP BASIC auth
+- (x) Securing web application with HTTP BASIC & Servlet FORM auth
 
 ## CDI
 - Own annotations
@@ -50,7 +52,7 @@ like:
 - (x) JAX-WS service
 - JAX-WS client
 - (x) JAX-RS service
-- JAX-RS client
+- (x) JAX-RS client
 
 ## Testing
 - (x) Unit testing with Arquillian

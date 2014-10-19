@@ -6,7 +6,7 @@ jboss_cli_connect="/opt/jboss-eap-6.2/bin/jboss-cli.sh -c"
 security_domain_prefix=moccasin
 
 ${jboss_cli_connect} <<EOF
-/subsystem=security/security-domain=${security_domain_prefix}-security-domain:add
+/subsystem=security/security-domain=${security_domain_prefix}-security-domain:add(cache-type=default)
 /subsystem=security/security-domain=${security_domain_prefix}-security-domain/authentication=classic:add( \
   login-modules=[ \
     { \

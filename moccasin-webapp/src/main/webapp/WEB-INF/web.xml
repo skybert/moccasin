@@ -25,33 +25,65 @@
     <welcome-file>index.xhtml</welcome-file>
   </welcome-file-list>
 
+  <login-config>
+    <auth-method>FORM</auth-method>
+    <form-login-config>
+      <form-login-page>/login.xhtml</form-login-page>
+      <form-error-page>/login.xhtml?failed=true</form-error-page>
+    </form-login-config>
+  </login-config>
+
   <security-constraint>
+    <display-name>User pages security constraint</display-name>
     <web-resource-collection>
-      <web-resource-name>All resources</web-resource-name>
-      <url-pattern>/*</url-pattern>
+      <web-resource-name>User restricted Access</web-resource-name>
+      <url-pattern>/users-only-info.xhtml</url-pattern>
     </web-resource-collection>
-    <!--
-        These are the roles that should be allowed to access your
-        resource(s)
-    -->
+    <web-resource-collection>
+      <url-pattern>/index.xhtml</url-pattern>
+    </web-resource-collection>
     <auth-constraint>
       <role-name>read</role-name>
       <role-name>write</role-name>
     </auth-constraint>
   </security-constraint>
+
   <!--
+      Need to set the session timeout less than that of the JAAS cache
+  -->
+  <session-config>
+    <session-timeout>1</session-timeout>
+  </session-config>
+
+  <!--
+      Basic auth based contraints:
+      security-constraint/web-resource-collection/auth-constraint:
+      These are the roles that should be allowed to access your
+      resource(s)
       These role names correspond to the role names returned by the
       rolesQuery defined within the security domain stanza in your
       standalone-[-full].xml
   -->
-  <security-role>
-    <role-name>read</role-name>
-  </security-role>
-  <security-role>
-    <role-name>write</role-name>
-  </security-role>
-  <login-config>
-    <auth-method>BASIC</auth-method>
-    <realm-name>Moccasin Security Realm (just a string)</realm-name>
-  </login-config>
+  <!--
+      <security-constraint>
+      <web-resource-collection>
+      <web-resource-name>All resources</web-resource-name>
+      <url-pattern>/*</url-pattern>
+      </web-resource-collection>
+      <auth-constraint>
+      <role-name>read</role-name>
+      <role-name>write</role-name>
+      </auth-constraint>
+      </security-constraint>
+      <login-config>
+      <auth-method>BASIC</auth-method>
+      <realm-name>Moccasin Security Realm (just a string)</realm-name>
+      </login-config>
+      <security-role>
+      <role-name>read</role-name>
+      </security-role>
+      <security-role>
+      <role-name>write</role-name>
+      </security-role>
+  -->
 </web-app>
