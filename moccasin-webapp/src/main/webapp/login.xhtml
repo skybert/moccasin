@@ -1,0 +1,34 @@
+<!DOCTYPE html PUBLIC
+"-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core">
+  <h:head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>JEEky :: in here be Indians</title>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="http://skybert.net/theme/styles/skybert.css"/>
+  </h:head>
+  <h:body>
+    <h1>JEEky :: Login page</h1>
+    <form method="post" action="j_security_check">
+      <h:outputLabel
+        value="User name and/or password is invalid"
+        rendered="#{param['failed']}"
+        style="color: red;"/>
+      <h:panelGrid columns="2">
+        <h:outputLabel value="User name:" for="j_username"/>
+        <h:inputText id="j_username"/>
+        <h:outputLabel value="Password:" for="j_password"/>
+        <h:inputSecret id="j_password"/>
+        <p>
+          <h:commandButton value="Login"/>
+        </p>
+      </h:panelGrid>
+    </form>
+  </h:body>
+</html>
