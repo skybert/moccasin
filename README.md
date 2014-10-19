@@ -10,10 +10,14 @@ like:
 - (x) JBoss setup
 
 ## EJBs
-- Securing method calls
 - (x) @Local
 - (x) @Stateless
 - @LocalBean
+
+## Security
+- (x) JBoss configuration for database backed security realm
+- Securing EJB method calls
+- Securing web application with standard HTTP
 
 ## CDI
 - Own annotations

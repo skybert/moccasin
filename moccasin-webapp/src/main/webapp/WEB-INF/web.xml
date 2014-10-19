@@ -25,4 +25,33 @@
     <welcome-file>index.xhtml</welcome-file>
   </welcome-file-list>
 
+  <security-constraint>
+    <web-resource-collection>
+      <web-resource-name>All resources</web-resource-name>
+      <url-pattern>/*</url-pattern>
+    </web-resource-collection>
+    <!--
+        These are the roles that should be allowed to access your
+        resource(s)
+    -->
+    <auth-constraint>
+      <role-name>read</role-name>
+      <role-name>write</role-name>
+    </auth-constraint>
+  </security-constraint>
+  <!--
+      These role names correspond to the role names returned by the
+      rolesQuery defined within the security domain stanza in your
+      standalone-[-full].xml
+  -->
+  <security-role>
+    <role-name>read</role-name>
+  </security-role>
+  <security-role>
+    <role-name>write</role-name>
+  </security-role>
+  <login-config>
+    <auth-method>BASIC</auth-method>
+    <realm-name>Moccasin Security Realm (just a string)</realm-name>
+  </login-config>
 </web-app>
