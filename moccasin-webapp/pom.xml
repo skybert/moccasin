@@ -14,28 +14,14 @@
   <artifactId>moccasin-webapp</artifactId>
   <packaging>war</packaging>
 
-  <dependencyManagement>
-    <dependencies>
-      <dependency>
-        <groupId>org.jboss.arquillian</groupId>
-        <artifactId>arquillian-bom</artifactId>
-        <version>1.1.4.Final</version>
-        <scope>import</scope>
-        <type>pom</type>
-      </dependency>
-    </dependencies>
-  </dependencyManagement>
-
   <dependencies>
     <dependency>
       <groupId>net.skybert</groupId>
       <artifactId>moccasin-api</artifactId>
-      <version>1.0</version>
     </dependency>
     <dependency>
       <groupId>net.skybert</groupId>
       <artifactId>moccasin-jms</artifactId>
-      <version>1.0</version>
     </dependency>
     <!--
         Dependencies available in the app server

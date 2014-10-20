@@ -25,12 +25,12 @@ public class IndianEntry implements Serializable
   @Inject
   IndianService service;
 
-  public long create()
+  public Integer create()
   {
     return create(indian);
   }
 
-  public long create(final Indian pIndian)
+  public Integer create(final Indian pIndian)
   {
     return service.create(pIndian);
   }

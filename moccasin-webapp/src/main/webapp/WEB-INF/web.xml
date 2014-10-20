@@ -39,9 +39,6 @@
       <web-resource-name>User restricted Access</web-resource-name>
       <url-pattern>/users-only-info.xhtml</url-pattern>
     </web-resource-collection>
-    <web-resource-collection>
-      <url-pattern>/index.xhtml</url-pattern>
-    </web-resource-collection>
     <auth-constraint>
       <role-name>read</role-name>
       <role-name>write</role-name>

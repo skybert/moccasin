@@ -14,7 +14,7 @@ public interface IndianService
 
   public List<Tribe> allTribes();
 
-  public long create(Indian indian);
+  public Integer create(Indian indian);
 
   public Object findTribe(Integer valueOf);
 

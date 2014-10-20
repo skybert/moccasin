@@ -9,15 +9,14 @@ import javax.persistence.Enumerated;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.Table;
-
-import net.skybert.moccasin.model.*;
-
 import javax.persistence.OneToMany;
+import javax.persistence.Table;
 import javax.validation.constraints.NotNull;
 
 import lombok.Getter;
 import lombok.ToString;
+
+import net.skybert.moccasin.model.Tribe;
 
 @ToString(exclude = "indians")
 @Entity
@@ -44,6 +43,7 @@ public class GatheringTribe implements Tribe
 
   public GatheringTribe(final Tribe tribe)
   {
+    id = tribe.getId();
     name = tribe.getName();
   }
 

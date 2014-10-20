@@ -26,7 +26,7 @@ public class IndianServiceImpl implements IndianService
 
   // @RolesAllowed({ "write" })
   @Logged
-  public long create(Indian indian)
+  public Integer create(Indian indian)
   {
     System.out.println(getClass() + " create=" + indian);
 

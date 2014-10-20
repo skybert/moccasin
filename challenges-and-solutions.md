@@ -228,3 +228,8 @@ for the view layer.
 >   at org.apache.coyote.http11.Http11Protocol$Http11ConnectionHandler.process(Http11Protocol.java:653) [jbossweb-7.2.2.Final-redhat-1.jar:7.2.2.Final-redhat-1]
 >   at org.apache.tomcat.util.net.JIoEndpoint$Worker.run(JIoEndpoint.java:920) [jbossweb-7.2.2.Final-redhat-1.jar:7.2.2.Final-redhat-1]
 >   at java.lang.Thread.run(Thread.java:745) [rt.jar:1.7.0_71]
+
+## TransientPropertyValueException: object references an unsaved transient instance
+> ERROR [org.apache.catalina.core.ContainerBase.[jboss.web].[default-host].[/moccasin-webapp-1.0].[Faces Servlet]] (http-localhost.localdomain/127.0.0.1:8080-1) JBWEB000236: Servlet.service() for servlet Faces Servlet threw exception: org.hibernate.TransientPropertyValueException: object references an unsaved transient instance - save the transient instance before flushing: net.skybert.moccasin.data.GatheringIndian.tribe -> net.skybert.moccasin.data.GatheringTribe
+>   at org.hibernate.engine.spi.CascadingAction$8.noCascade(CascadingAction.java:380) [hibernate-core-4.2.7.SP1-redhat-3.jar:4.2.7.SP1-redhat-3]
+>   at org.hibernate.engine.internal.Cascade.cascade(Cascade.java:176) [hibernate-core-4.2.7.SP1-redhat-3.jar:4.2.7.SP1-redhat-3]

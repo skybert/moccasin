@@ -12,8 +12,9 @@ like:
 ## EJBs
 - (x) @Local
 - (x) @Stateless
+- (x) @MessageDriven
 - @LocalBean
-- @Schedule
+- (x) @Schedule, cron like services in Java
 
 ## Security
 - (x) JBoss configuration for database backed security realm

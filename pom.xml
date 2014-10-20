@@ -16,7 +16,6 @@
     <module>moccasin-client</module>
   </modules>
 
-
   <dependencyManagement>
     <dependencies>
       <dependency>
@@ -25,6 +24,16 @@
         <version>1.1.4.Final</version>
         <scope>import</scope>
         <type>pom</type>
+      </dependency>
+      <dependency>
+        <groupId>net.skybert</groupId>
+        <artifactId>moccasin-api</artifactId>
+        <version>${project.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>net.skybert</groupId>
+        <artifactId>moccasin-jms</artifactId>
+        <version>${project.version}</version>
       </dependency>
     </dependencies>
   </dependencyManagement>
