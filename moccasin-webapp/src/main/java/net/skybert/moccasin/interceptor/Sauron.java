@@ -18,7 +18,7 @@ public class Sauron implements Serializable
     Object returnValue = context.proceed();
     for (Object parameter : context.getParameters())
     {
-      System.out.println(getClass().getName() + " sees that "
+      System.out.println(getClass().getSimpleName() + " sees that "
           + context.getMethod().getName() + " was called with "
           + parameter.getClass().getSimpleName() + "(" + parameter + ")");
     }

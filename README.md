@@ -41,12 +41,11 @@ like:
 
 ## UI
 - Rich Faces
-- JSF
+- (x) JSF
 - JSF templates
 - JSF Validators
 - (x) JSF Converters
 - Resource bundles, language, strings.
-- Securing the web application
 - Navigation from one XHTML to another
 
 ## Web services

@@ -233,3 +233,15 @@ for the view layer.
 > ERROR [org.apache.catalina.core.ContainerBase.[jboss.web].[default-host].[/moccasin-webapp-1.0].[Faces Servlet]] (http-localhost.localdomain/127.0.0.1:8080-1) JBWEB000236: Servlet.service() for servlet Faces Servlet threw exception: org.hibernate.TransientPropertyValueException: object references an unsaved transient instance - save the transient instance before flushing: net.skybert.moccasin.data.GatheringIndian.tribe -> net.skybert.moccasin.data.GatheringTribe
 >   at org.hibernate.engine.spi.CascadingAction$8.noCascade(CascadingAction.java:380) [hibernate-core-4.2.7.SP1-redhat-3.jar:4.2.7.SP1-redhat-3]
 >   at org.hibernate.engine.internal.Cascade.cascade(Cascade.java:176) [hibernate-core-4.2.7.SP1-redhat-3.jar:4.2.7.SP1-redhat-3]
+
+If you google this problem, you find answers that tell you that you
+have to persist the tribe field before persiisting the indian:
+```
+entitityManager.persist(indian.getTribe());
+entitityManager.persist(indian);
+```
+or adding ```cascade=Cascade.PERSIST``` to the tribe field inside
+```GatheringIndian```. However, my problem was different: this was
+supposed to be a reference to an already existing tribe entry. It
+turned out to be a copy constructor which didn't copy the id, thus
+requesting Hibernate to create a new tribe entry.
