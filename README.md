@@ -45,7 +45,7 @@ like:
 - JSF templates
 - JSF Validators
 - (x) JSF Converters
-- Resource bundles, language, strings.
+- (x) Resource bundles, language, strings.
 - (x) Navigation from one XHTML to another
 
 ## Web services
