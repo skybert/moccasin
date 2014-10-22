@@ -12,6 +12,7 @@ import javax.persistence.TypedQuery;
 
 import net.skybert.moccasin.data.GatheringIndian;
 import net.skybert.moccasin.data.GatheringTribe;
+import net.skybert.moccasin.data.SmokeTalk;
 import net.skybert.moccasin.interceptor.Logged;
 import net.skybert.moccasin.model.Indian;
 import net.skybert.moccasin.model.Tribe;
@@ -121,5 +122,13 @@ public class IndianServiceImpl implements IndianService
 
     List<GatheringIndian> gatheringIndians = query.getResultList();
     return toIndians(gatheringIndians);
+  }
+
+  @Override
+  @Logged
+  public Long remember(SmokeTalk talk)
+  {
+    entityManager.persist(talk);
+    return talk.getId();
   }
 }

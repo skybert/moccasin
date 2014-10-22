@@ -24,7 +24,7 @@ like:
 
 ## CDI
 - Own annotations
-- Conversation scope
+- (x) @ConversationScoped
 - (x) Interceptor
 - Alternatives
 - Decorators
@@ -46,7 +46,7 @@ like:
 - JSF Validators
 - (x) JSF Converters
 - Resource bundles, language, strings.
-- Navigation from one XHTML to another
+- (x) Navigation from one XHTML to another
 
 ## Web services
 - (x) JAX-WS service

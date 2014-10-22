@@ -1,0 +1,44 @@
+<!DOCTYPE html PUBLIC
+          "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"
+          >
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      >
+  <h:head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>JEEky :: in here be Indians</title>
+    <link
+       rel="stylesheet"
+       type="text/css"
+       href="http://skybert.net/theme/styles/skybert.css"/>
+  </h:head>
+
+  <h:body>
+
+    <h1>Let's smoke the peace pipe, ugh!</h1>
+
+    <h:form>
+      <p>
+        <h:outputLabel value="Number of winters since we last spoke:" for="name"/>
+        <h:inputText
+           id="numberOfWinters"
+           value="#{talk.numberOfWintersSinceLastTalk}"
+           required="true"
+           requiredMessage="I must know how long it was since we last spoke, ugh!"
+           />
+        <h:message for="numberOfWinters" showDetail="true"/>
+      </p>
+      <p>
+        <h:commandButton
+           id="save"
+           value="Save"
+           action="#{pipe.numberOfWintersSinceLastTalk(talk.numberOfWintersSinceLastTalk)}"
+           />
+      </p>
+    </h:form>
+  </h:body>
+
+</html>

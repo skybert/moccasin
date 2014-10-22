@@ -2,6 +2,7 @@ package net.skybert.moccasin.ejb;
 
 import javax.ejb.Local;
 
+import net.skybert.moccasin.data.SmokeTalk;
 import net.skybert.moccasin.model.*;
 
 import java.util.*;
@@ -23,4 +24,6 @@ public interface IndianService
   public List<Indian> getIndiansByName(String name);
 
   public List<Indian> getIndiansByTribeName(String name);
+
+  public Long remember(SmokeTalk talk);
 }
