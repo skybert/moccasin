@@ -4,7 +4,8 @@ import java.io.File;
 
 import javax.inject.Inject;
 
-import net.skybert.moccasin.model.WildIndian;
+import net.skybert.moccasin.model.Indian;
+import net.skybert.moccasin.model.Wild;
 
 import org.jboss.arquillian.container.test.api.Deployment;
 import org.jboss.arquillian.junit.Arquillian;
@@ -24,7 +25,8 @@ import org.junit.runner.RunWith;
 public class InjectionTest
 {
   @Inject
-  WildIndian indian;
+  @Wild
+  Indian indian;
 
   @Deployment
   public static JavaArchive createDeployment()
@@ -44,6 +46,8 @@ public class InjectionTest
   @Test
   public void an_indian_can_be_injected()
   {
+    System.out.println("indian=" + indian);
+
     Assert.assertNotNull(indian);
     Assert.assertNull(indian.getId());
   }

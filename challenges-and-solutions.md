@@ -245,3 +245,19 @@ or adding ```cascade=Cascade.PERSIST``` to the tribe field inside
 supposed to be a reference to an already existing tribe entry. It
 turned out to be a copy constructor which didn't copy the id, thus
 requesting Hibernate to create a new tribe entry.
+
+## What's a managed bean?
+A bean which can use interceptors, has lifecycle callbacks
+(@PostConstruct) and can have injections, such as @EJB (and @Inject?)
+
+## What's the difference between an EJB and a managed bean?
+> EJB is a managed beans + built-in transaction support and security annotations.
+
+## What's the difference between a CDI bean and a managed bean?
+> CDI beans are created and destroyed by the container within their
+scope (request, session, conversation, application).
+
+## What's the difference between @EJB and @Inject?
+> @EJB refers to a session bean
+
+> @Inject can inject any kind of bean

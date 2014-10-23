@@ -9,6 +9,7 @@ import lombok.ToString;
  * @version 1.0
  */
 @ToString(callSuper = true)
+@Wild
 public class WildIndian implements Indian
 // extends AbstractIndian
 {

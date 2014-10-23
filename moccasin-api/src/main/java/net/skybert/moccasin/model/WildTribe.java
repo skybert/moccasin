@@ -6,6 +6,7 @@ package net.skybert.moccasin.model;
  * @author Torstein Krause Johansen
  * @version 1.0
  */
+@Wild
 public class WildTribe extends AbstractTribe
 {
   public WildTribe()
