@@ -26,8 +26,10 @@ like:
 - Own annotations
 - (x) @ConversationScoped
 - (x) Interceptor
+- (x) Qualifiers
 - Alternatives
 - Decorators
+- Event producers and consumers
 
 ## Persistence
 - (x) JPA
