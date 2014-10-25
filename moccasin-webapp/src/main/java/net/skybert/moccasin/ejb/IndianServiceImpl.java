@@ -3,6 +3,7 @@ package net.skybert.moccasin.ejb;
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.annotation.PostConstruct;
 import javax.ejb.Stateless;
 import javax.enterprise.inject.Produces;
 import javax.inject.Named;
@@ -24,6 +25,13 @@ public class IndianServiceImpl implements IndianService
 
   @PersistenceContext
   private EntityManager entityManager;
+
+  @PostConstruct
+  public void postInit()
+  {
+    System.out.println("postInit says " + getClass().getName()
+        + " has been constructed");
+  }
 
   // @RolesAllowed({ "write" })
   @Logged
