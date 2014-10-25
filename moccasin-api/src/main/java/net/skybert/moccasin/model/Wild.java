@@ -8,7 +8,8 @@ import java.lang.annotation.Target;
 import javax.inject.Qualifier;
 
 /**
- * Wild
+ * Wild. Makes it possible to inject Wild implementations of the "pure" model
+ * interfaces, see injection of {@link Indian} and {@link Tribe}.
  * 
  * @author Torstein Krause Johansen
  * @version 1.0

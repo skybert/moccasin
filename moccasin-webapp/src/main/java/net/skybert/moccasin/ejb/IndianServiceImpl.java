@@ -89,6 +89,7 @@ public class IndianServiceImpl implements IndianService
   @Override
   public Indian findIndian(Integer id)
   {
+    System.out.println("findIndian in" + getClass().getName());
     GatheringIndian indian = entityManager.find(GatheringIndian.class, id);
     if (indian != null)
     {

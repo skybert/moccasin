@@ -25,9 +25,10 @@ like:
 ## CDI
 - Own annotations
 - (x) @ConversationScoped
-- (x) Interceptor
-- (x) Qualifiers
-- Alternatives
+- (x) @Interceptor
+- (x) @Qualifier
+- (x) @Produces
+- (x) @Alternative
 - Decorators
 - Event producers and consumers
 
