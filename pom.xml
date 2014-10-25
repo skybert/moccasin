@@ -26,6 +26,12 @@
         <type>pom</type>
       </dependency>
       <dependency>
+        <groupId>org.apache.derby</groupId>
+        <artifactId>derby</artifactId>
+        <version>10.10.2.0</version>
+        <scope>test</scope>
+      </dependency>
+      <dependency>
         <groupId>net.skybert</groupId>
         <artifactId>moccasin-api</artifactId>
         <version>${project.version}</version>

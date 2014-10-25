@@ -102,6 +102,10 @@
       <version>1.0.2.Final-redhat-1</version>
       <scope>test</scope>
     </dependency>
+    <dependency>
+      <groupId>org.apache.derby</groupId>
+      <artifactId>derby</artifactId>
+    </dependency>
   </dependencies>
 
   <build>

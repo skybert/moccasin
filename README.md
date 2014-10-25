@@ -29,7 +29,7 @@ like:
 - (x) @Qualifier
 - (x) @Produces
 - (x) @Alternative
-- Decorators
+- (x) @Decorator
 - Event producers and consumers
 
 ## Persistence
