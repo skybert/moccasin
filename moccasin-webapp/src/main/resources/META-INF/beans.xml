@@ -7,4 +7,7 @@
     <class>net.skybert.moccasin.interceptor.Sauron</class>
   </interceptors>
 
+  <decorators>
+    <class>net.skybert.moccasin.ejb.IndianServiceDecorator</class>
+  </decorators>
 </beans>
