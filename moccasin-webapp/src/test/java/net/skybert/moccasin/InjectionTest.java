@@ -39,7 +39,6 @@ public class InjectionTest
         .addAsManifestResource(
             new File("src/main/resources/META-INF", "persistence.xml"));
 
-    System.out.println("jar=" + jar.toString(true));
     return jar;
   }
 

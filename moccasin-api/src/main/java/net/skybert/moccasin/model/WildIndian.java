@@ -39,7 +39,6 @@ public class WildIndian implements Indian
   @Override
   public WildTribe getTribe()
   {
-    System.out.println("hello from " + getClass().getName());
     if (tribe != null)
     {
       return new WildTribe(tribe.getId(), tribe.getName());
