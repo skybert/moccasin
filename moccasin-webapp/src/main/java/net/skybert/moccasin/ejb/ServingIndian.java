@@ -19,7 +19,7 @@ public class ServingIndian extends AbstractIndian
     setId(indian.getId());
     setAge(indian.getAge());
     setName(indian.getName());
-    setTribe(indian.getTribe());
+    setTribe(new ServingTribe(indian.getTribe()));
   }
 
   public ServingIndian()
