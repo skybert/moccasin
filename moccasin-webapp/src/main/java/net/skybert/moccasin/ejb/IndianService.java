@@ -1,11 +1,12 @@
 package net.skybert.moccasin.ejb;
 
+import java.util.List;
+
 import javax.ejb.Local;
 
 import net.skybert.moccasin.data.SmokeTalk;
-import net.skybert.moccasin.model.*;
-
-import java.util.*;
+import net.skybert.moccasin.model.Indian;
+import net.skybert.moccasin.model.Tribe;
 
 @Local
 public interface IndianService

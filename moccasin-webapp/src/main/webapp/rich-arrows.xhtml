@@ -1,0 +1,58 @@
+<!DOCTYPE html PUBLIC
+"-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"
+>
+<html
+  xmlns="http://www.w3.org/1999/xhtml"
+  xmlns:a4j="http://richfaces.org/a4j"
+  xmlns:f="http://java.sun.com/jsf/core"
+  xmlns:h="http://java.sun.com/jsf/html"
+  xmlns:rich="http://richfaces.org/rich"
+  xmlns:ui="http://java.sun.com/jsf/facelets">
+  <h:head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>JEEky :: Rich Arrows</title>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="http://skybert.net/theme/styles/skybert.css"/>
+  </h:head>
+
+  <h:body>
+    <h1>
+      Create a new arrow for your quiver
+    </h1>
+    <h:form>
+      <rich:panel id="newArrowPanel" header="Register new Arrow, ugh!">
+        <h:outputLabel for="length" value="Length:"/>
+        <h:inputText id="length" value="#{arrow.length}">
+          <rich:validator/>
+        </h:inputText>
+        <rich:message for="length" showDetail="true"/>
+      </rich:panel>
+      <a4j:commandButton
+        id="register"
+        value="Create new arrow"
+        action="#{arrowEntry.create()}"
+        execute="newArrowPanel"
+        render="newArrowPanel,quiverOfArrows"
+        />
+      <rich:messages id="messages" globalOnly="true" showDetail="true"/>
+    </h:form>
+
+    <h2>
+      Arrows registered
+    </h2>
+    <rich:dataTable id="quiverOfArrows" value="#{allArrows}" var="anArrow">
+      <rich:column>
+        <f:facet name="header">ID</f:facet>
+        <h:outputText value="#{anArrow.id}"/>
+      </rich:column>
+      <rich:column>
+        <f:facet name="header">Length</f:facet>
+        <h:outputText value="#{anArrow.length}"/>
+      </rich:column>
+    </rich:dataTable>
+  </h:body>
+
+</html>

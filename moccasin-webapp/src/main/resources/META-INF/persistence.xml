@@ -8,6 +8,7 @@
     <class>net.skybert.moccasin.data.SmokeTalk</class>
     <class>net.skybert.moccasin.data.GatheringTribe</class>
     <class>net.skybert.moccasin.data.GatheringIndian</class>
+    <class>net.skybert.moccasin.data.GatheringArrow</class>
 
     <properties>
       <property name="hibernate.hbm2ddl.auto" value="update"/>
