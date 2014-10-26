@@ -1,8 +1,8 @@
 package net.skybert.moccasin.model;
 
 /**
- * A arrow. Ugh!
- * 
+ * An arrow. Ugh!
+ *
  * @author Torstein Krause Johansen
  * @version 1.0
  */
