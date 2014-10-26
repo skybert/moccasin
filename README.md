@@ -23,14 +23,13 @@ like:
 - (x) Securing web application with HTTP BASIC & Servlet FORM auth
 
 ## CDI
-- Own annotations
 - (x) @ConversationScoped
 - (x) @Interceptor
 - (x) @Qualifier
 - (x) @Produces
 - (x) @Alternative
 - (x) @Decorator
-- Event producers and consumers
+- (x) Event producers and consumers
 
 ## Persistence
 - (x) JPA

@@ -7,7 +7,7 @@ import lombok.ToString;
 /**
  * SmokeEvent. Every time an indian blows some smoke, a smoke event is
  * triggered.
- *
+ * 
  * @author Torstein Krause Johansen
  * @version 1.0
  */

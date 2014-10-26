@@ -261,3 +261,14 @@ scope (request, session, conversation, application).
 > @EJB refers to a session bean
 
 > @Inject can inject any kind of bean
+
+## Transaction is required to perform this operation
+> Caused by: javax.persistence.TransactionRequiredException: JBAS011469: Transaction is required to perform this operation (either use a transaction or extended persistence context)
+>   at org.jboss.as.jpa.container.AbstractEntityManager.transactionIsRequired(AbstractEntityManager.java:692) [jboss-as-jpa-7.3.0.Final-redhat-14.jar:7.3.0.Final-redhat-14]
+>   at org.jboss.as.jpa.container.AbstractEntityManager.persist(AbstractEntityManager.java:562) [jboss-as-jpa-7.3.0.Final-redhat-14.jar:7.3.0.Final-redhat-14]
+>   at net.skybert.moccasin.ejb.ArrowServiceImpl.create(ArrowServiceImpl.java:52) [moccasin-webapp-1.0.jar:]
+>   at net.skybert.moccasin.model.ArrowEntry.create(ArrowEntry.java:37) [moccasin-webapp-1.0.jar:]
+
+My ArrowServiceImpl had to be annotated with an EJB annotation, such
+as ```@Stateless``` for the app server to decorate it with transaction
+support.
