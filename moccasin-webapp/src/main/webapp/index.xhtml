@@ -29,7 +29,9 @@
             value="#{indian.name}"
             required="true"
             requiredMessage="An indian must have a name, ugh!"
-            />
+            >
+            <f:validator validatorId="indianNameValidator"/>
+          </h:inputText>
           <h:message for="name" showDetail="true"/>
           &nbsp;
           <h:outputLabel value="Age:" for="age"/>
