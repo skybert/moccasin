@@ -3,8 +3,6 @@ package net.skybert.moccasin.model;
 import javax.validation.constraints.Max;
 import javax.validation.constraints.Min;
 
-import sun.security.util.Length;
-
 import lombok.ToString;
 
 /**

@@ -67,33 +67,4 @@ public class IndianEntry implements Serializable
     };
   }
 
-  @Named
-  @Produces
-  public Converter getIndianConverter()
-  {
-    return new Converter()
-    {
-      @Override
-      public Object getAsObject(FacesContext context,
-                                UIComponent component,
-                                String value)
-      {
-
-        return service.findIndian(Integer.valueOf(value));
-      }
-
-      @Override
-      public String getAsString(FacesContext context,
-                                UIComponent component,
-                                Object value)
-      {
-        if (value == null)
-        {
-          return "";
-        }
-
-        return String.valueOf(((Indian) value).getId());
-      }
-    };
-  }
 }

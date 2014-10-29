@@ -5,10 +5,8 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
-import javax.validation.constraints.Min;
 import javax.validation.constraints.Max;
-
-import sun.security.util.Length;
+import javax.validation.constraints.Min;
 
 import lombok.ToString;
 
