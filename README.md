@@ -43,6 +43,8 @@ like:
 
 ## UI
 - Rich Faces
+  -- (x) AJAXy submission of form data
+  -- (x) Updated parts of the page via AJAX
 - (x) JSF
 - JSF templates
 - JSF Validators

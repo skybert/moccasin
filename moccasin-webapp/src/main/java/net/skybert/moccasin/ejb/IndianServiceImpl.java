@@ -6,6 +6,8 @@ import java.util.List;
 import javax.annotation.PostConstruct;
 import javax.ejb.Stateless;
 import javax.enterprise.inject.Produces;
+import javax.faces.application.FacesMessage;
+import javax.faces.context.FacesContext;
 import javax.inject.Named;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
@@ -39,7 +41,19 @@ public class IndianServiceImpl implements IndianService
   {
     System.out.println(getClass() + " create=" + indian);
 
-    entityManager.persist(new GatheringIndian(indian));
+    try
+    {
+      entityManager.persist(new GatheringIndian(indian));
+    }
+    catch (Exception e)
+    {
+      FacesContext.getCurrentInstance()
+          .addMessage(
+              null,
+              new FacesMessage(FacesMessage.SEVERITY_INFO,
+                  "Failed creating indian=" + indian + " message="
+                      + e.getMessage(), e.getCause().getMessage()));
+    }
     return indian.getId();
   }
 
