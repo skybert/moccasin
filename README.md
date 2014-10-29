@@ -47,7 +47,7 @@ like:
   -- (x) Updated parts of the page via AJAX
 - (x) JSF
 - JSF templates
-- JSF Validators
+- (x) JSF Validators
 - (x) JSF Converters
 - (x) Resource bundles, language, strings.
 - (x) Navigation from one XHTML to another
